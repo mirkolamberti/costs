@@ -25,10 +25,10 @@ function ProjectForm({ handleSubmit, btnText, projectData }) {
             .catch((err) => console.log(err))
     }, [])
     
-    function submit(e) {
+    const submit = (e) => {
         e.preventDefault()
-        console.log(project)
-        //handleSubmit(project)
+        //console.log(project)
+        handleSubmit(project)
     }
 
     function handleChange(e) {
@@ -39,7 +39,7 @@ function ProjectForm({ handleSubmit, btnText, projectData }) {
     function handleCategory(e) {
         setProject({ ...project, category:{
             id: e.target.value,
-            name: e.target.option[e.target.selectedIndex].text,
+            name: e.target.options[e.target.selectedIndex].text,
         }})
         //console.log(project)
     }
@@ -51,7 +51,8 @@ function ProjectForm({ handleSubmit, btnText, projectData }) {
                     type={"text"} text={"Nome do projeto"} name={"nomePrj"} 
                     placeholder={"Insira o nome do projeto"}  
                     handleOnChange={handleChange}
-                    value={project.name ? project.name : ''}
+                    //value={project.name ? project.name : ''}
+                    
                 />
             </div>
             <div>
