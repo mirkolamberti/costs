@@ -54,6 +54,39 @@
       "cost": 0,
       "services": [],
       "id": 5
+    },
+    {
+      "nomePrj": "Projeto A do 13/03",
+      "budget": "15000",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 6
+    },
+    {
+      "nomePrj": "Projeto B do 13/03",
+      "budget": "20000",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 7
+    },
+    {
+      "nomePrj": "Projeto C do 13/03",
+      "budget": "25000",
+      "category": {
+        "id": "3",
+        "name": "Design"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 8
     }
   ],
   "categories": [
