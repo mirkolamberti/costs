@@ -5,6 +5,8 @@ import {useState, useEffect} from 'react'
 
 import Loading from '../layout/Loading'
 import Container from '../layout/Container'
+import Message from '../layout/Message'
+import ProjectForm from '../project/ProjectForm'
 
 function Project() {
 
@@ -13,6 +15,8 @@ function Project() {
 
     const [project, setProject] = useState([])
     const [showProjectForm, setShowProjectForm] = useState(false)
+    const [message, setMessage] = useState()
+    const [type, setType] = useState()
 
     useEffect(() => {
         setTimeout(() => {
@@ -30,6 +34,37 @@ function Project() {
         }, 1000);
     }, [id])
 
+    function editPost(project) {
+        // quando edito o form, já estou mudando os valores nas variáveis
+        // preciso enviar o formulário para salvar as alterações
+
+        // budget validation - para não enviar um valor maior do orçado
+        if(project.budget < project.cost) {
+            // mensagem de erro
+            setMessage('O orçamento não pode ser menor que o custo do projeto!')
+            setType('error')
+            return false
+        }
+
+        fetch(`http://localhost:5000/projects/${project.id}`, {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(project),
+        })
+            .then(resp => resp.json())
+            .then((data) => {
+                // altero o projeto com os dados que vieram alterados
+                setProject(data)
+                setShowProjectForm(false)
+                // mensagem de salvatagem
+                setMessage('Projeto atualizado!')
+                setType('success')
+            })
+            .catch(err => console.log(err))
+    }
+
     function toggleProjectForm() {
         setShowProjectForm(!showProjectForm)
     }
@@ -39,6 +74,7 @@ function Project() {
         {project.nomePrj ? (
             <div className={styles.project_details}>
                 <Container customClass="column">
+                    {message && <Message type={type} msg={message} />}
                     <div className={styles.details_container}>
                         <h1>Projeto: {project.nomePrj}</h1>
                         <button className={styles.btn} onClick={toggleProjectForm}>
@@ -57,7 +93,13 @@ function Project() {
                                 </p>
                             </div>
                         ) : (
-                            <div className={styles.project_info}>detalhes</div>
+                            <div className={styles.project_info}>
+                                <ProjectForm 
+                                    handleSubmit={editPost} 
+                                    btnText="Concluir edição" 
+                                    projectData={project}
+                                />
+                            </div>
                         )}
                     </div>
                 </Container>

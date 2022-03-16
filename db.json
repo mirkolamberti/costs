@@ -12,11 +12,11 @@
       "id": 1
     },
     {
-      "nomePrj": "Projeto A do 13/03",
+      "nomePrj": "Projeto A do 13/03 atualizado",
       "budget": "15000",
       "category": {
-        "id": "1",
-        "name": "Infra"
+        "id": "3",
+        "name": "Design"
       },
       "cost": 0,
       "services": [],
