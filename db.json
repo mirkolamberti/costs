@@ -18,8 +18,15 @@
         "id": "3",
         "name": "Design"
       },
-      "cost": 0,
-      "services": [],
+      "cost": 1222,
+      "services": [
+        {
+          "name": "asa",
+          "cost": "1222",
+          "description": "asda",
+          "id": "cc829025-d2ba-48b1-b846-42deb0ef2046"
+        }
+      ],
       "id": 6
     },
     {
@@ -51,7 +58,7 @@
         "id": "4",
         "name": "Planejamento"
       },
-      "cost": 250,
+      "cost": 1250,
       "services": [
         {
           "name": "s1",
@@ -64,6 +71,18 @@
           "cost": "150",
           "description": "asa2",
           "id": "8b329f77-0b8b-492e-94ac-777b968a4226"
+        },
+        {
+          "name": "Serviço 1",
+          "cost": "500",
+          "description": "descrição 1",
+          "id": "fde212ce-59e8-48f6-8c5c-8f195bf9d1dd"
+        },
+        {
+          "name": "Serviço 1",
+          "cost": "500",
+          "description": "descrição 1",
+          "id": "fde212ce-59e8-48f6-8c5c-8f195bf9d1dd"
         }
       ],
       "id": 9
