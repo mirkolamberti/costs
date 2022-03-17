@@ -58,31 +58,13 @@
         "id": "4",
         "name": "Planejamento"
       },
-      "cost": 1250,
+      "cost": 1200,
       "services": [
         {
-          "name": "s1",
-          "cost": "100",
-          "description": "asa",
-          "id": "6e57abf7-e954-4208-89ce-38db777207a4"
-        },
-        {
-          "name": "s2",
-          "cost": "150",
-          "description": "asa2",
-          "id": "8b329f77-0b8b-492e-94ac-777b968a4226"
-        },
-        {
-          "name": "Serviço 1",
-          "cost": "500",
-          "description": "descrição 1",
-          "id": "fde212ce-59e8-48f6-8c5c-8f195bf9d1dd"
-        },
-        {
-          "name": "Serviço 1",
-          "cost": "500",
-          "description": "descrição 1",
-          "id": "fde212ce-59e8-48f6-8c5c-8f195bf9d1dd"
+          "name": "Alicerce",
+          "cost": "1200",
+          "description": "base",
+          "id": "203d178f-8788-4cf3-b7a1-4f09d645e41c"
         }
       ],
       "id": 9

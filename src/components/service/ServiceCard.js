@@ -6,6 +6,8 @@ function ServiceCard({id, name, cost, description, handleRemove}) {
 
     const remove = (e) => {
         // deleto o serviço
+        e.preventDefault()
+        handleRemove(id, cost)
     }
 
     return(
