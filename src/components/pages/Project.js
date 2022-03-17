@@ -15,6 +15,7 @@ function Project() {
 
     const [project, setProject] = useState([])
     const [showProjectForm, setShowProjectForm] = useState(false)
+    const [showServiceForm, setShowServiceForm] = useState(false)
     const [message, setMessage] = useState()
     const [type, setType] = useState()
 
@@ -35,6 +36,7 @@ function Project() {
     }, [id])
 
     function editPost(project) {
+        setMessage('')
         // quando edito o form, já estou mudando os valores nas variáveis
         // preciso enviar o formulário para salvar as alterações
 
@@ -67,6 +69,10 @@ function Project() {
 
     function toggleProjectForm() {
         setShowProjectForm(!showProjectForm)
+    }
+
+    function toggleServiceForm() {
+        setShowServiceForm(!showServiceForm)
     }
 
     return(
@@ -102,6 +108,21 @@ function Project() {
                             </div>
                         )}
                     </div>
+                    <div className={styles.service_form_container}>
+                        <h2>Adicione um serviço:</h2>
+                        <button className={styles.btn} onClick={toggleServiceForm}>
+                            {!showServiceForm ? 'Adicionar serviço' : 'Fechar'}
+                        </button>
+                        <div className={styles.project_info}>
+                            {showServiceForm && (
+                                <div>Formulário de serviço</div>
+                            )}
+                        </div>
+                    </div>
+                    <h2>Serviços</h2>
+                    <Container customClass="start">
+                        <p>Itens de serviço</p>
+                    </Container>
                 </Container>
             </div>
         ): (
