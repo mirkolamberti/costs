@@ -51,8 +51,21 @@
         "id": "4",
         "name": "Planejamento"
       },
-      "cost": 0,
-      "services": [],
+      "cost": 250,
+      "services": [
+        {
+          "name": "s1",
+          "cost": "100",
+          "description": "asa",
+          "id": "6e57abf7-e954-4208-89ce-38db777207a4"
+        },
+        {
+          "name": "s2",
+          "cost": "150",
+          "description": "asa2",
+          "id": "8b329f77-0b8b-492e-94ac-777b968a4226"
+        }
+      ],
       "id": 9
     }
   ],
