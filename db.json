@@ -18,13 +18,25 @@
         "id": "3",
         "name": "Design"
       },
-      "cost": 1222,
+      "cost": 7114,
       "services": [
         {
           "name": "asa",
           "cost": "1222",
           "description": "asda",
           "id": "cc829025-d2ba-48b1-b846-42deb0ef2046"
+        },
+        {
+          "name": "Design 2",
+          "cost": "222",
+          "description": "Inserir mais páginas",
+          "id": "21684759-dfd7-4234-972a-ae3b4847e33b"
+        },
+        {
+          "name": "Deploy",
+          "cost": "5670",
+          "description": "Montar o serviço",
+          "id": "15ea0773-89ec-41e4-92c3-8e02930415ea"
         }
       ],
       "id": 6
